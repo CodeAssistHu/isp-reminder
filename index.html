@@ -61,54 +61,248 @@
     <thead>
       <tr>
         <th>Client Name</th>
-        <th>Contact</th>
-        <th>Billing Date</th>
+        <th>Service</th>
+        <th>Caller ID</th>
+        <th>Address</th>
+        <th>Uptime</th>
       </tr>
     </thead>
     <tbody id="client-table">
       <tr>
-        <td>John Doe</td>
-        <td>0700 123 456</td>
-        <td data-date="2025-04-13">
-          2025-04-13
-          <a class="calendar-link" target="_blank"
-             href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Internet+Bill+Due+-+John+Doe&dates=20250413T080000Z/20250413T083000Z&details=Collect+payment+from+John+Doe&sf=true">
-             📅 Add
-          </a>
-        </td>
+        <td>Edwin</td>
+        <td>pppoe</td>
+        <td>08:40:F3:CD:3A:30</td>
+        <td>20.0.0.252</td>
+        <td>11h25m</td>
       </tr>
       <tr>
-        <td>Jane Smith</td>
-        <td>0712 987 654</td>
-        <td data-date="2025-04-15">
-          2025-04-15
-          <a class="calendar-link" target="_blank"
-             href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Internet+Bill+Due+-+Jane+Smith&dates=20250415T080000Z/20250415T083000Z&details=Collect+payment+from+Jane+Smith&sf=true">
-             📅 Add
-          </a>
-        </td>
+        <td>KK</td>
+        <td>pppoe</td>
+        <td>78:9A:18:FD:E5:9C</td>
+        <td>20.0.0.245</td>
+        <td>11h24m33s</td>
       </tr>
-    </tbody>
-  </table>
-
-  <div class="footer">
-    © 2025 Your ISP Company | Billing Tracker
-  </div>
-
-  <script>
-    const today = new Date().toISOString().split("T")[0];
-    document.getElementById("today").textContent = today;
-
-    document.querySelectorAll("#client-table tr").forEach(row => {
-      const billingDateCell = row.querySelector("td[data-date]");
-      if (billingDateCell) {
-        const billingDate = billingDateCell.dataset.date;
-        if (billingDate === today) {
-          row.classList.add("due-today");
-        }
-      }
-    });
-  </script>
-
-</body>
-</html>
+      <tr>
+        <td>Gabriel</td>
+        <td>pppoe</td>
+        <td>FC:EC:DA:20:FC:CF</td>
+        <td>20.0.0.244</td>
+        <td>11h24m20s</td>
+      </tr>
+      <tr>
+        <td>Roba</td>
+        <td>pppoe</td>
+        <td>1C:3B:F3:07:D3:83</td>
+        <td>20.0.0.243</td>
+        <td>11h24m18s</td>
+      </tr>
+      <tr>
+        <td>Lugz</td>
+        <td>pppoe</td>
+        <td>08:40:F3:CC:CD:68</td>
+        <td>20.0.0.240</td>
+        <td>11h23m55s</td>
+      </tr>
+      <tr>
+        <td>Hans</td>
+        <td>pppoe</td>
+        <td>D8:47:32:7E:CB:F7</td>
+        <td>20.0.0.238</td>
+        <td>11h23m53s</td>
+      </tr>
+      <tr>
+        <td>Hilda</td>
+        <td>pppoe</td>
+        <td>D8:32:14:BB:5A:78</td>
+        <td>20.0.0.237</td>
+        <td>11h23m52s</td>
+      </tr>
+      <tr>
+        <td>Car Wash</td>
+        <td>pppoe</td>
+        <td>C8:3A:35:34:D5:10</td>
+        <td>20.0.0.235</td>
+        <td>11h23m46s</td>
+      </tr>
+      <tr>
+        <td>Collo</td>
+        <td>pppoe</td>
+        <td>C8:3A:35:34:C5:48</td>
+        <td>20.0.0.231</td>
+        <td>11h23m33s</td>
+      </tr>
+      <tr>
+        <td>Wanjo</td>
+        <td>pppoe</td>
+        <td>68:D7:9A:9C:A6:62</td>
+        <td>20.0.0.230</td>
+        <td>11h23m32s</td>
+      </tr>
+      <tr>
+        <td>Joy</td>
+        <td>pppoe</td>
+        <td>D4:6E:0E:7C:34:3F</td>
+        <td>20.0.0.225</td>
+        <td>11h23m22s</td>
+      </tr>
+      <tr>
+        <td>Joel</td>
+        <td>pppoe</td>
+        <td>24:5A:4C:42:CE:38</td>
+        <td>20.0.0.223</td>
+        <td>11h22m48s</td>
+      </tr>
+      <tr>
+        <td>Alparf</td>
+        <td>pppoe</td>
+        <td>C8:3A:35:8A:34:60</td>
+        <td>20.0.0.219</td>
+        <td>11h13m17s</td>
+      </tr>
+      <tr>
+        <td>Sammy</td>
+        <td>pppoe</td>
+        <td>B4:B0:24:40:13:D9</td>
+        <td>20.0.0.221</td>
+        <td>11h11m27s</td>
+      </tr>
+      <tr>
+        <td>Wanyama</td>
+        <td>pppoe</td>
+        <td>F4:1E:57:A4:4F:46</td>
+        <td>20.0.0.242</td>
+        <td>9h35m53s</td>
+      </tr>
+      <tr>
+        <td>Swim</td>
+        <td>pppoe</td>
+        <td>D8:0D:17:26:3E:81</td>
+        <td>20.0.0.239</td>
+        <td>9h33m40s</td>
+      </tr>
+      <tr>
+        <td>Restaurant</td>
+        <td>pppoe</td>
+        <td>F8:1A:67:E6:3D:7D</td>
+        <td>20.0.0.241</td>
+        <td>9h32m52s</td>
+      </tr>
+      <tr>
+        <td>Ger</td>
+        <td>pppoe</td>
+        <td>C0:06:C3:10:28:43</td>
+        <td>20.0.0.217</td>
+        <td>8h57m18s</td>
+      </tr>
+      <tr>
+        <td>Kia</td>
+        <td>pppoe</td>
+        <td>28:EE:52:FA:9A:11</td>
+        <td>20.0.0.216</td>
+        <td>8h13m55s</td>
+      </tr>
+      <tr>
+        <td>Jose</td>
+        <td>pppoe</td>
+        <td>78:9A:18:AA:BA:28</td>
+        <td>20.0.0.227</td>
+        <td>8h6m59s</td>
+      </tr>
+      <tr>
+        <td>Ishmael2</td>
+        <td>pppoe</td>
+        <td>78:17:BE:1B:A5:CD</td>
+        <td>20.0.0.234</td>
+        <td>7h55m25s</td>
+      </tr>
+      <tr>
+        <td>Lugz1</td>
+        <td>pppoe</td>
+        <td>C8:3A:35:26:80:98</td>
+        <td>20.0.0.232</td>
+        <td>6h50m5s</td>
+      </tr>
+      <tr>
+        <td>Thooon</td>
+        <td>pppoe</td>
+        <td>60:FB:00:B9:5C:F4</td>
+        <td>20.0.0.246</td>
+        <td>5h51m15s</td>
+      </tr>
+      <tr>
+        <td>Fri</td>
+        <td>pppoe</td>
+        <td>50:0F:F5:2F:86:48</td>
+        <td>20.0.0.254</td>
+        <td>5h33m12s</td>
+      </tr>
+      <tr>
+        <td>Vinh</td>
+        <td>pppoe</td>
+        <td>50:0F:F5:50:C7:40</td>
+        <td>20.0.0.224</td>
+        <td>4h46m36s</td>
+      </tr>
+      <tr>
+        <td>Dennis</td>
+        <td>pppoe</td>
+        <td>2C:C3:E6:ED:89:A8</td>
+        <td>20.0.0.250</td>
+        <td>4h21m33s</td>
+      </tr>
+      <tr>
+        <td>Riruta1</td>
+        <td>pppoe</td>
+        <td>50:0F:F5:3E:64:90</td>
+        <td>20.0.0.233</td>
+        <td>4h20m15s</td>
+      </tr>
+      <tr>
+        <td>Sonia</td>
+        <td>pppoe</td>
+        <td>B0:4E:26:9C:98:B7</td>
+        <td>20.0.0.222</td>
+        <td>3h40m57s</td>
+      </tr>
+      <tr>
+        <td>Carl</td>
+        <td>pppoe</td>
+        <td>F0:A7:31:53:CA:1D</td>
+        <td>20.0.0.220</td>
+        <td>3h39m26s</td>
+      </tr>
+      <tr>
+        <td>Sande</td>
+        <td>pppoe</td>
+        <td>D8:47:32:25:9E:15</td>
+        <td>20.0.0.247</td>
+        <td>3h1m23s</td>
+      </tr>
+      <tr>
+        <td>Poter</td>
+        <td>pppoe</td>
+        <td>E4:3E:C6:26:7F:80</td>
+        <td>20.0.0.248</td>
+        <td>1h43m28s</td>
+      </tr>
+      <tr>
+        <td>Home</td>
+        <td>pppoe</td>
+        <td>00:E0:4C:68:1D:76</td>
+        <td>20.0.0.215</td>
+        <td>1h1m29s</td>
+      </tr>
+      <tr>
+        <td>SC</td>
+        <td>pppoe</td>
+        <td>B8:3A:08:5A:29:B7</td>
+        <td>20.0.0.226</td>
+        <td>55m28s</td>
+      </tr>
+      <tr>
+        <td>Cholhok</td>
+        <td>pppoe</td>
+        <td>E8:65:D4:1A:9D:58</td>
+        <td>20.0.0.229</td>
+        <td>16m21s</td>
+      </
