@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISP Client Billing Reminder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tr.due-today {
+      background-color: #ffe5e5;
+    }
+
+    a.calendar-link {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ISP Client Billing Reminder</h1>
+  <p><strong>Today's date:</strong> <span id="today"></span></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Contact</th>
+        <th>Billing Date</th>
+      </tr>
+    </thead>
+    <tbody id="client-table">
+      <tr>
+        <td>John Doe</td>
+        <td>0700 123 456</td>
+        <td data-date="2025-04-13">
+          2025-04-13
+          <a class="calendar-link" target="_blank"
+             href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Internet+Bill+Due+-+John+Doe&dates=20250413T080000Z/20250413T083000Z&details=Collect+payment+from+John+Doe&sf=true">
+             📅 Add
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>0712 987 654</td>
+        <td data-date="2025-04-15">
+          2025-04-15
+          <a class="calendar-link" target="_blank"
+             href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Internet+Bill+Due+-+Jane+Smith&dates=20250415T080000Z/20250415T083000Z&details=Collect+payment+from+Jane+Smith&sf=true">
+             📅 Add
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    © 2025 Your ISP Company | Billing Tracker
+  </div>
+
+  <script>
+    const today = new Date().toISOString().split("T")[0];
+    document.getElementById("today").textContent = today;
+
+    document.querySelectorAll("#client-table tr").forEach(row => {
+      const billingDateCell = row.querySelector("td[data-date]");
+      if (billingDateCell) {
+        const billingDate = billingDateCell.dataset.date;
+        if (billingDate === today) {
+          row.classList.add("due-today");
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
